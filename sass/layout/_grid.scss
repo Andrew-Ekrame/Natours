@@ -45,17 +45,31 @@
   margin: 0 auto;
   row-gap: $gutter-horizontal;
   column-gap: $gutter-vertical;
-
+  @include respond(tab-port) {
+    column-gap: $gutter-vertical-small;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    padding: 0 3rem;
+  }
   &--2-col {
     grid-template-columns: repeat(2, 1fr);
+    @include respond(tab-port) {
+      grid-template-columns: 50rem;
+    }
   }
 
   &--3-col {
     grid-template-columns: repeat(3, 1fr);
+    @include respond(tab-port) {
+      grid-template-columns: 50rem;
+    }
   }
 
   &--4-col {
     grid-template-columns: repeat(4, 1fr);
+    @include respond(tab-port) {
+      grid-template-columns: 50rem;
+    }
   }
 
   .col-1 {
